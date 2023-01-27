@@ -1,0 +1,286 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+/*********************************************/
+/*********************************************/
+/* メニューボタン */
+/*********************************************/
+/*********************************************/
+/* フッター */
+* {
+  padding: 0px;
+  margin: 0px; }
+
+ul {
+  list-style: none;
+  display: flex;
+  white-space: nowrap; }
+
+body {
+  background-color: cornsilk; }
+
+header {
+  /* メニュー｜レスポンシブ対応 */
+  /* ヘッダー部分 */
+  position: relative;
+  width: 100%;
+  background-color: #109f53;
+  height: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  z-index: 10; }
+  header .menu_btn {
+    display: none !important;
+    margin-left: auto;
+    margin-right: 15px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: solid 3px yellow;
+    display: block; }
+    header .menu_btn span {
+      display: inline-block;
+      position: absolute;
+      left: 13px;
+      height: 2px;
+      background-color: yellow; }
+      header .menu_btn span:nth-of-type(1) {
+        top: 18px;
+        width: 50%; }
+      header .menu_btn span:nth-of-type(2) {
+        top: 25px;
+        width: 50%; }
+  header .active span:nth-of-type(1) {
+    top: 16px;
+    left: 12px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 50%; }
+  header .active span:nth-of-type(2) {
+    position: absolute;
+    top: 28px;
+    left: 12px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 50%; }
+  @media all and (max-width: 1160px) {
+    header .menu_btn {
+      display: block !important; } }
+  header h1 {
+    white-space: nowrap;
+    margin: 0px 15px 0px 25px;
+    font-size: clamp(40px, 1vw, 60px);
+    font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+    color: yellow; }
+    header h1 a {
+      text-decoration: none;
+      color: yellow; }
+  header span {
+    font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+    font-size: small;
+    position: relative;
+    left: 10px;
+    bottom: 0px; }
+  header ul {
+    position: absolute;
+    right: 10px; }
+    header ul li {
+      padding: 14px 10px; }
+      header ul li a {
+        text-decoration: none;
+        color: yellow; }
+  header .search_box {
+    margin: 0px 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center; }
+    header .search_box .sear_text {
+      height: 30px; }
+    header .search_box #sear_box {
+      width: 30vw;
+      padding: 10px 15px;
+      /*ボックスを大きくする*/
+      font-size: 16px;
+      border-radius: 3px;
+      border-style: inset;
+      border-width: 2.5px; }
+      header .search_box #sear_box::placeholder {
+        font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif; }
+      header .search_box #sear_box:focus {
+        outline: 0; }
+    header .search_box #sub_but {
+      padding: 11px 40px;
+      /*ボックスを大きくする*/
+      font-size: 16px;
+      font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+      border-style: inset;
+      border-width: 3px; }
+      header .search_box #sub_but:active {
+        background-color: gray;
+        position: relative;
+        top: 2px; }
+  @media all and (max-width: 1160px) {
+    header ul {
+      z-index: 2;
+      display: none;
+      text-align: center;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-color: lightgray; }
+      header ul li {
+        border-width: 3px;
+        padding: 0px 0px;
+        border-style: outset; }
+        header ul li:hover {
+          border-style: inset; }
+        header ul li a {
+          display: block;
+          line-height: 60px;
+          text-decoration: none;
+          color: black;
+          font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif; }
+          header ul li a:hover {
+            background-color: darkgrey;
+            border-style: none; }
+          header ul li a:active {
+            background-color: darkgrey; }
+    header .is-active {
+      display: block; } }
+  @media all and (max-width: 767.98px) {
+    header #sub_but {
+      display: none; }
+    header h1 {
+      margin: 0px 10px 0px 5%;
+      font-size: 32px; } }
+
+footer {
+  font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+  background-color: black;
+  margin-top: 90px;
+  width: 100%;
+  position: sticky;
+  top: 100vh; }
+  footer .footer_list {
+    height: 100px;
+    margin: auto; }
+    footer .footer_list ul {
+      padding: 15px;
+      height: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; }
+      footer .footer_list ul input a, footer .footer_list ul li a {
+        margin: 0px 13px;
+        font-size: small;
+        color: white;
+        display: block;
+        text-decoration: none; }
+        footer .footer_list ul input a:hover, footer .footer_list ul li a:hover {
+          color: yellow; }
+  footer p {
+    color: yellow;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 15px;
+    text-decoration: underline;
+    text-decoration-color: blueviolet; }
+
+h2 {
+  color: gray;
+  text-align: center;
+  margin-bottom: 10px; }
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  width: 100%; }
+
+form p, #id {
+  display: block;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: -5px;
+  letter-spacing: 1.1px; }
+
+form p {
+  color: #d78aef;
+  background-color: #ffcdd2;
+  border: 3px solid #d78aef; }
+
+#complete {
+  color: #13a8b8;
+  background-color: #adece9;
+  border: 3px solid #13a8b8; }
+
+.form_class {
+  width: 500px;
+  padding: 40px;
+  border-radius: 6px;
+  background-color: white;
+  font-family: 'system-ui';
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+
+.form_div {
+  text-transform: uppercase; }
+
+.form_div > label {
+  letter-spacing: 3px;
+  font-size: 1rem; }
+
+.info_div {
+  text-align: center;
+  margin-top: 20px; }
+
+.info_div {
+  letter-spacing: 1px; }
+
+.field_class {
+  width: 100%;
+  text-indent: 6px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  padding: 5px 0px;
+  /*ボックスを大きくする*/
+  font-size: 16px;
+  border-radius: 3px;
+  border-style: inset;
+  border-width: 2.5px; }
+  .field_class::placeholder {
+    font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif; }
+  .field_class:focus {
+    outline: 0; }
+
+.submit_class {
+  padding: 11px 40px;
+  /*ボックスを大きくする*/
+  font-size: 16px;
+  font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+  border-style: inset;
+  border-width: 3px;
+  letter-spacing: .8px;
+  margin: auto;
+  display: block;
+  cursor: pointer; }
+
+#id {
+  display: block;
+  color: #d78aef;
+  font-size: 1rem;
+  background-color: #ffcdd2;
+  border: 3px solid #d78aef;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: -5px;
+  letter-spacing: 1.1px; }
+
+/*# sourceMappingURL=login.css.map */

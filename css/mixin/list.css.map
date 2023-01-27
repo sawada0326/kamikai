@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,+CAA+C;AAC/C,+CAA+C;AAE/C,WAAW",
+"sources": ["../../sass/mixin/list.scss"],
+"names": [],
+"file": "list.css"
+}
