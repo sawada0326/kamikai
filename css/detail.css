@@ -93,6 +93,9 @@
         .main table tr td:nth-of-type(2) {
           max-width: 850px;
           padding-left: 10%; }
+        .date_time {
+          white-space: nowrap;
+        }
       .main table tr #star {
         color: goldenrod; }
 

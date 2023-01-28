@@ -43,12 +43,13 @@
     $publish_status = isset($_POST['publish_status']) ? (int)$_POST['publish_status'] : 1;
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/form.css">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
 
     <title>神回DB | 追加フォーム</title>

@@ -56,6 +56,7 @@ unset($_SESSION['file_err']);
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
     <title>神回DB|管理版</title>
 </head>
 <body>

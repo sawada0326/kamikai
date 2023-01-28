@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
-    <link rel=”icon” type=”image/png” href=“../image/favicon.png”>
+    <link rel="shortcut icon" type="image/png" href="../image/favicon.png">
     <link rel="stylesheet" href="../css/style.css">
     <title>神回DB</title>
 </head>

@@ -32,7 +32,7 @@ unset($_SESSION['e']);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="../css/form.css">
-    <link rel=”icon” type=”image/png” href=“../image/favicon.png”>
+    <link rel="shortcut icon" type="image/png" href="../image/favicon.png">
     <title>神回DB | リクエストフォーム</title>
 </head>
 <body>

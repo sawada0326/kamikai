@@ -85,7 +85,7 @@
                 </tr>
                 <tr>
                     <td>放送日</td>
-                    <td><?php echo date('Y年n月j日放送回', strtotime(h($articleData['on_air_date']))) ?></td>
+                    <td class="date_time"><?php echo date('Y年n月j日放送回', strtotime(h($articleData['on_air_date']))) ?></td>
                 </tr>
                 <tr>
                     <td>放送日時</td>

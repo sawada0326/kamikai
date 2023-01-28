@@ -11,12 +11,13 @@ UserLogic::logout();
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/post.css">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
     <title>ログアウト完了</title>
 </head>
 <body>

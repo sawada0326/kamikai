@@ -34,7 +34,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/detail.css">
-    <link rel=”icon” type=”image/png” href=“../image/favicon.png”>
+    <link rel="shortcut icon" type="image/png" href="../image/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
     <title>神回DB｜『<?php echo h($articleData['title']) ?>』<?php echo h($articleData['caption']) ?>の回</title>
 </head>
@@ -80,9 +80,9 @@
                 </tr>
                 <tr>
                     <td>放送日</td>
-                    <td><?php echo date('Y年n月j日放送回', strtotime(h($articleData['on_air_date']))) ?></td>
+                    <td class="date_time"><?php echo date('Y年n月j日放送回', strtotime(h($articleData['on_air_date']))) ?></td>
                 </tr>
-                <tr>
+                <tr class="date_time">
                     <td>放送日時</td>
                     <td><?php echo date('H:i', strtotime($articleData['start_time'])) ?>~<?php echo date('H:i', strtotime($articleData['finish_time'])) ?></td>
                 </tr>
