@@ -35,7 +35,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="../css/chat.css">
-    <link rel="shortcut icon" type="image/png" href="../image/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
     <title>神回DB|<?php echo $category ?>版掲示板</title>
 </head>
 <body>
