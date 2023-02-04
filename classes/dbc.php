@@ -58,7 +58,7 @@ Class Dbc {
         $sql = "SELECT * FROM $this->table_name WHERE publish_status = 1 AND category = :category ORDER BY id DESC";
         // SQL実行
         $stmt = $dbh->prepare($sql);
-        $stmt->bindValue(':category', $category, \PDO::PARAM_INT);
+        $stmt->bindValue(':category', $category, \PDO::PARAM_STR);
         //SQL実行
         $stmt->execute();
         $result = $stmt->fetchall(\PDO::FETCH_ASSOC);
