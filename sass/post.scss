@@ -1,0 +1,63 @@
+@charset "UTF-8";
+@import "mixin/footer.scss";
+@import "mixin/header.scss";
+@import "mixin/list.scss";
+@import "mixin/theme.scss";
+@import "mixin/comment.scss";
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  background-color: $main-color;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center; 
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  width: 100%; 
+}
+
+main {
+  letter-spacing: 1.1px;
+  width: 500px;
+  height: 200px;
+  padding-top: 50px;
+  border-radius: 6px;
+  background-color: white;
+  font-family: 'system-ui';
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+  .button_div {
+    margin: 0px 5px; 
+  }
+  a {
+    display: inline-block;
+    color: #5465d0;
+    background-color: #c9f9fe;
+    border-bottom: 5px solid #5465d0;
+    font-weight: 500;
+    width: 100px;
+    padding: 1rem 4rem;
+    margin: 30px auto;
+    text-decoration: none;
+    border-radius: 100vh;
+    position: relative;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    &:active {
+      border: none;
+      top: 5px; 
+    }
+  }
+}
+
+/*# sourceMappingURL=post.css.map */

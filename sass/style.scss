@@ -1,0 +1,150 @@
+@charset "UTF-8";
+@import "mixin/footer.scss";
+@import "mixin/header.scss";
+@import "mixin/list.scss";
+@import "mixin/theme.scss";
+@import "mixin/comment.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 0vw;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $main-color;
+  font-family: $sub-font;
+  overflow-x:hidden;
+}
+
+.container {
+  max-width: 1030px;
+  margin: 0 auto; 
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  white-space: nowrap; 
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent; 
+}
+
+footer {
+  @include footer;
+}
+
+header {
+  @include header;
+}
+/* 最新更新神回 */
+.update_list {
+  @include list;
+}
+/**********************************/
+/**********************************/
+h1 {
+  text-align: center;
+  font-size: 90px;
+  font-size: clamp(80px, 1.5vw, 90px);
+  font-family:$main-font;
+  color: $sub-color;
+  margin-top: 70px; 
+  span {
+    font-size: small;
+    position: relative;
+    left: 10px;
+    bottom: 0px; 
+  }
+}
+
+h2 {
+  font-family: $main-font;
+  color: black;
+  width: 100%;
+  max-width: 800px;
+  margin: 10px auto; 
+  & span {
+  padding-left: 0.5em; 
+  }
+}
+.all_search_box {
+  margin: 40px 5px;
+  text-align: center; 
+  #all_search {
+    width: 80%;
+    padding: 14px 20px;
+    /*ボックスを大きくする*/
+    font-size: 16px;
+    border-radius: 3px;
+    border-style: inset;
+    border-width: 2.5px; 
+    &::placeholder {
+      font-family:$sub-font;
+    }
+    &:focus {
+      outline: 0; 
+    }
+  }
+  #all_sub {
+    padding: 6.9px 30px;
+    /*ボックスを大きくする*/
+    font-size: 16px;
+    font-family:$sub-font;
+    border-width: 3px;   
+    &:active {
+      background-color: #666;
+      position: relative;
+      top: 2px; 
+    }
+  }
+}
+@media all and (max-width: 767.98px) {
+  #all_search {
+    width: 90%; 
+  }
+
+  #all_sub {
+    display: none; 
+  }
+
+  tr td:nth-of-type(4) {
+    color: gray;
+    font-size: 0.8rem; 
+  } 
+}
+@media all and (max-width: 575.98px) {
+  h1 {
+    font-size: 58px;
+    margin-top: 40px; 
+    span {
+      display: block;
+      margin: 10px;
+      font-size: 1.0rem; 
+    }
+  }
+
+  .update_list {
+    margin-top: 80px !important; 
+  }
+
+  #all_search {
+    width: 90%; 
+  }
+
+  #all_sub {
+    display: none; 
+  }
+
+  tr td:nth-of-type(4) {
+    color: gray;
+    font-size: 0.8rem; 
+  } 
+}

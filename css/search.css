@@ -1,15 +1,14 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
-/*********************************************/
-/*********************************************/
-/* メニューボタン */
-/*********************************************/
-/*********************************************/
-/* 番組リスト */
-/*********************************************/
-/*********************************************/
-/* フッター */
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -19,14 +18,14 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: #109f53; }
+  background-color: #f9f9f7; }
 
 .container {
   margin: 0 auto;
   background-color: white;
   max-width: 980px;
   height: 100%;
-  padding: 140px 0px 65px 0px; }
+  padding: 30px 0px 65px 0px; }
 
 input:focus::placeholder,
 textarea:focus::placeholder {
@@ -37,19 +36,157 @@ ul {
   display: flex;
   white-space: nowrap; }
 
+.update_list {
+  color: #444;
+  box-sizing: border-box;
+  z-index: 1;
+  margin-top: 120px;
+  margin-top: 40px; }
+  .update_list .cards {
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    list-style: none; }
+  .update_list .card {
+    text-align: left;
+    position: relative;
+    margin: 30px 20px;
+    border: solid 1.2px #888;
+    padding: 20px 10px;
+    width: 185px;
+    min-width: 175px;
+    height: 280px;
+    display: list-item;
+    transition: 0.6s; }
+    .update_list .card > img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      -moz-border-radius: 0px;
+      -webkit-border-radius: 0px;
+      border-radius: 0px; }
+    .update_list .card:hover {
+      opacity: 0.7;
+      animation-play-state: paused; }
+  .update_list a {
+    color: black;
+    text-decoration: none; }
+  .update_list .cate_mark {
+    width: 35px;
+    height: 35px;
+    color: white;
+    font-family: "yu-mincho-pr6n", sans-serif;
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: -18px;
+    left: -18px; }
+    .update_list .cate_mark > img {
+      width: 20px;
+      height: 20px;
+      margin: 2.3px 0px 0px 2.3px; }
+  .update_list .tv {
+    background-color: #f0877d; }
+  .update_list .radio {
+    background-color: #0f7891; }
+  .update_list .anime {
+    background-color: #fff000; }
+  .update_list .star i {
+    margin-right: 0.2em;
+    color: #888; }
+  .update_list .title {
+    font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+    font-weight: 700;
+    line-height: 170%;
+    letter-spacing: 0.1rem;
+    height: 60px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    width: 100%; }
+  .update_list .onair {
+    color: #666;
+    font-size: small; }
+  .update_list .comment_mark {
+    text-align: right;
+    color: #888;
+    font-size: small; }
+  .update_list .click_table:hover td {
+    filter: brightness(110%);
+    opacity: 0.6;
+    transition: opacity .3s;
+    cursor: pointer; }
+  .update_list .private {
+    border: 2px solid red; }
+    .update_list .private span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+      background-color: red;
+      padding: 2px; }
+      .update_list .private span .lock {
+        position: inherit;
+        font-size: 0.7em;
+        top: 2.2px;
+        left: 2.6px;
+        color: white; }
+  .update_list h2 {
+    font-family: "yu-mincho-pr6n", sans-serif;
+    color: black;
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto; }
+    .update_list h2 span {
+      padding-left: 0.5em; }
+  .update_list .home_h2 {
+    font-family: "yu-mincho-pr6n", sans-serif;
+    color: black;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto 20px auto;
+    text-align: center; }
+  @media all and (max-width: 670.98px) {
+    @keyframes infinity-scroll-left {
+      from {
+        transform: translateX(0); }
+      to {
+        transform: translateX(-100%); } }
+    .update_list .cards {
+      max-width: none;
+      width: 100vw;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: initial;
+      list-style: none;
+      animation: infinity-scroll-left 20s linear 0.6s infinite running; }
+    .update_list .card {
+      display: list-item; } }
+  @media all and (max-width: 670.98px) {
+    .update_list .cards {
+      width: inherit;
+      display: flex;
+      flex-wrap: wrap;
+      animation: none;
+      margin: auto 10px; }
+    .update_list .card {
+      display: list-item; } }
+
 header {
-  /* メニュー｜レスポンシブ対応 */
-  /* ヘッダー部分 */
   position: relative;
   width: 100%;
-  background-color: #109f53;
+  background-color: #f9f9f7;
   height: 100px;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  z-index: 10;
-  font-family: 'M PLUS 1p', sans-serif;
-  position: fixed; }
+  z-index: 10; }
   header .menu_btn {
     display: none !important;
     margin-left: auto;
@@ -58,14 +195,14 @@ header {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    border: solid 3px yellow;
+    border: solid 3px black;
     display: block; }
     header .menu_btn span {
       display: inline-block;
       position: absolute;
       left: 13px;
       height: 2px;
-      background-color: yellow; }
+      background-color: black; }
       header .menu_btn span:nth-of-type(1) {
         top: 18px;
         width: 50%; }
@@ -90,13 +227,13 @@ header {
     white-space: nowrap;
     margin: 0px 15px 0px 25px;
     font-size: clamp(40px, 1vw, 60px);
-    font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
-    color: yellow; }
+    font-family: "yu-mincho-pr6n", sans-serif;
+    color: black; }
     header h1 a {
       text-decoration: none;
-      color: yellow; }
+      color: black; }
   header span {
-    font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+    font-family: "yu-mincho-pr6n", sans-serif;
     font-size: small;
     position: relative;
     left: 10px;
@@ -108,7 +245,7 @@ header {
       padding: 14px 10px; }
       header ul li a {
         text-decoration: none;
-        color: yellow; }
+        color: black; }
   header .search_box {
     margin: 0px 20px;
     display: flex;
@@ -125,14 +262,14 @@ header {
       border-style: inset;
       border-width: 2.5px; }
       header .search_box #sear_box::placeholder {
-        font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif; }
+        font-family: "yu-mincho-pr6n", sans-serif; }
       header .search_box #sear_box:focus {
         outline: 0; }
     header .search_box #sub_but {
       padding: 11px 40px;
       /*ボックスを大きくする*/
       font-size: 16px;
-      font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+      font-family: "yu-mincho-pr6n", sans-serif;
       border-style: inset;
       border-width: 3px; }
       header .search_box #sub_but:active {
@@ -149,24 +286,21 @@ header {
       left: 0;
       right: 0;
       width: 100%;
-      background-color: lightgray; }
+      background-color: #000;
+      opacity: 0.8; }
       header ul li {
         border-width: 3px;
-        padding: 0px 0px;
-        border-style: outset; }
-        header ul li:hover {
-          border-style: inset; }
+        padding: 0px 0px; }
         header ul li a {
+          opacity: 1;
           display: block;
           line-height: 60px;
           text-decoration: none;
-          color: black;
-          font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif; }
+          color: #fff;
+          font-family: "yu-gothic-pr6n", sans-serif;
+          border: solid 0.5px #eee; }
           header ul li a:hover {
-            background-color: darkgrey;
-            border-style: none; }
-          header ul li a:active {
-            background-color: darkgrey; }
+            background-color: #888; }
     header .is-active {
       display: block; } }
   @media all and (max-width: 767.98px) {
@@ -175,9 +309,12 @@ header {
     header h1 {
       margin: 0px 10px 0px 5%;
       font-size: 32px; } }
+  @media all and (max-width: 400px) {
+    header .menu_btn {
+      display: none !important; } }
 
 footer {
-  font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+  font-family: "yu-gothic-pr6n", sans-serif;
   background-color: black;
   margin-top: 90px;
   width: 100%;
@@ -199,189 +336,33 @@ footer {
         color: white;
         display: block;
         text-decoration: none; }
-        footer .footer_list ul input a:hover, footer .footer_list ul li a:hover {
-          color: yellow; }
+      footer .footer_list ul input a:hover,
+      footer .footer_list ul li a:hover {
+        color: yellow; }
   footer p {
-    color: yellow;
+    color: white;
     text-align: center;
     padding: 15px 0px;
-    font-size: 15px;
-    text-decoration: underline;
-    text-decoration-color: blueviolet; }
-
-.update_list {
-  color: #444;
-  margin-left: 20px;
-  margin-right: 20px;
-  box-sizing: border-box;
-  z-index: 1; }
-  .update_list a {
-    display: block;
-    text-align: right;
-    max-width: 800px;
-    margin: 10px auto;
-    text-decoration: none; }
-    .update_list a:hover, .update_list a:visited {
-      color: blue; }
-    .update_list a span {
-      padding-right: 0.5em; }
-  .update_list table {
-    width: 100%;
-    max-width: 800px;
-    border-collapse: collapse;
-    margin: auto;
-    background-color: #FFFFFB;
-    color: #444;
-    border: solid 1.2px #888;
-    position: relative; }
-  .update_list tr {
-    height: 50px;
-    border-top: 1.2px dashed gray; }
-    .update_list tr:first-child {
-      border-top: none; }
-    .update_list tr td {
-      font-family: 'Kozuka Gothic Pr6N','M PLUS 1p', sans-serif;
-      padding: 0px 5px;
-      overflow: hidden;
-      white-space: nowrap;
-      position: relative; }
-      .update_list tr td:nth-of-type(1) {
-        width: 60px;
-        color: goldenrod;
-        padding: 0px 16px; }
-      .update_list tr td:nth-of-type(2) {
-        text-align: left;
-        width: 30px; }
-      .update_list tr td:nth-of-type(3) {
-        color: #444;
-        padding: 0px 0px;
-        max-width: 300px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -webkit-text-overflow: ellipsis;
-        -o-text-overflow: ellipsis; }
-        .update_list tr td:nth-of-type(3)::before {
-          content: "『"; }
-        .update_list tr td:nth-of-type(3)::after {
-          content: "』"; }
-      .update_list tr td:nth-of-type(4) {
-        color: gray; }
-      .update_list tr td:nth-of-type(5) {
-        color: tomato;
-        font-size: 13px; }
-  .update_list .click_table:hover td {
-    filter: brightness(110%);
-    opacity: 0.6;
-    transition: opacity .3s;
-    cursor: pointer; }
-  .update_list .cate_mark {
-    width: 40px;
-    color: white;
-    font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
-    font-size: 10px;
-    padding: 5px;
-    border-radius: 50vh; }
-  .update_list .tv {
-    background-color: red; }
-  .update_list .radio {
-    background-color: blue; }
-  .update_list .anime {
-    background-color: orange; }
-  .update_list .private {
-    border: 2px solid red; }
-    .update_list .private span {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 17px;
-      height: 17px;
-      display: inline-block;
-      background-color: red;
-      padding: 2px; }
-      .update_list .private span .lock {
-        position: inherit;
-        font-size: 0.7em;
-        top: 2.2px;
-        left: 2.6px;
-        color: white; }
-  @media all and (max-width: 678.98px) {
-    .update_list tr td:nth-of-type(4) {
-      font-size: 0.8em; }
-    .update_list h2 {
-      font-size: 20px;
-      padding-top: 8px; }
-      .update_list h2 span {
-        padding-left: 0.5em; } }
-  @media all and (max-width: 575.98px) {
-    .update_list {
-      margin-left: 0px;
-      margin-right: 0px; }
-      .update_list table {
-        width: 100%;
-        table-layout: fixed;
-        border-collapse: collapse;
-        margin: auto;
-        background-color: #FFFFFB;
-        color: #444;
-        border: solid 1.2px gray;
-        border-right-style: none;
-        border-left-style: none; }
-      .update_list tr td:nth-of-type(1) {
-        font-size: 0.8em;
-        width: 20%; }
-      .update_list tr td:nth-of-type(2) {
-        font-size: 0.8em;
-        width: 15%; }
-      .update_list tr td:nth-of-type(3) {
-        font-size: 0.9em;
-        width: 55%; }
-      .update_list tr td:nth-of-type(4) {
-        display: none; }
-      .update_list tr td:nth-of-type(5) {
-        width: 10%;
-        min-width: 10px; } }
-  @media all and (max-width: 400.98px) {
-    .update_list .cate_mark {
-      width: 30px;
-      color: white;
-      font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
-      font-size: 7px;
-      padding: 5px;
-      border-radius: 50vh; }
-    .update_list tr td:nth-of-type(1) {
-      padding: 0px 5px;
-      font-size: 0.8em;
-      width: 20%; }
-    .update_list tr td:nth-of-type(2) {
-      font-size: 0.8em;
-      width: 15%; }
-    .update_list tr td:nth-of-type(3) {
-      font-size: 0.9em;
-      width: 55%; }
-    .update_list tr td:nth-of-type(4) {
-      display: none; } }
+    font-size: 15px; }
 
 h2, h3, .update_list > p {
-  font-family: 'Kozuka Gothic Pr6N','M PLUS 1p', sans-serif;
+  font-family: "yu-gothic-pr6n", sans-serif;
   color: #444;
   width: 100%;
   max-width: 800px;
   margin: 10px auto; }
-  h2 span, h3 span, .update_list > p span {
-    padding-left: 0.5em; }
+
+h2 span, h3 span, .update_list > p span {
+  padding-left: 0.5em; }
 
 h3 {
   color: coral; }
 
 @media all and (max-width: 678.98px) {
   h2 {
-    font-size: 20px;
-    padding-top: 8px; }
-    h2 span {
-      padding-left: 0.5em; } }
-/* **************************************************************** */
-/* **************************************************************** */
-/* レスポンシブ対応｜更新 */
+    font-size: 20px; }
+
+  h2 span {
+    padding-left: 0.5em; } }
 
 /*# sourceMappingURL=search.css.map */

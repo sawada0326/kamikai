@@ -1,0 +1,138 @@
+@charset "UTF-8";
+@import "mixin/footer.scss";
+@import "mixin/header.scss";
+@import "mixin/list.scss";
+@import "mixin/theme.scss";
+@import "mixin/comment.scss";
+
+* {
+  padding: 0px;
+  margin: 0px; }
+
+ul {
+  list-style: none;
+  display: flex;
+  white-space: nowrap; }
+
+body {
+  background-color: $main-color; 
+}
+
+header {
+  @include header;
+}
+
+footer {
+  @include footer;
+}
+
+h2 {
+  color: gray;
+  text-align: center;
+  margin-bottom: 10px; 
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  width: 100%; 
+}
+
+form p, #id {
+  display: block;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: -5px;
+  letter-spacing: 1.1px; 
+}
+
+form p {
+  color: #d78aef;
+  background-color: #ffcdd2;
+  border: 3px solid #d78aef; 
+}
+
+#complete {
+  color: #13a8b8;
+  background-color: #adece9;
+  border: 3px solid #13a8b8; 
+}
+
+.form_class {
+  width: 500px;
+  padding: 40px;
+  border-radius: 6px;
+  background-color: white;
+  font-family: 'system-ui';
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.form_div {
+  text-transform: uppercase; 
+  > label {
+    letter-spacing: 3px;
+    font-size: 1rem; 
+  }
+}
+
+
+.info_div {
+  text-align: center;
+  margin-top: 20px; 
+}
+
+.info_div {
+  letter-spacing: 1px; 
+}
+
+.field_class {
+  width: 100%;
+  text-indent: 6px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  padding: 5px 0px;
+  /*ボックスを大きくする*/
+  font-size: 16px;
+  border-radius: 3px;
+  border-style: inset;
+  border-width: 2.5px; 
+  &::placeholder {
+    font-family: $main-font;
+  }
+  &:focus {
+    outline: 0; 
+  }
+}
+
+.submit_class {
+  padding: 11px 40px;
+  /*ボックスを大きくする*/
+  font-size: 16px;
+  font-family: $main-font;
+  border-style: inset;
+  border-width: 3px;
+  letter-spacing: .8px;
+  margin: auto;
+  display: block;
+  cursor: pointer; 
+}
+
+#id {
+  display: block;
+  color: #d78aef;
+  font-size: 1rem;
+  background-color: #ffcdd2;
+  border: 3px solid #d78aef;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: -5px;
+  letter-spacing: 1.1px; 
+}
+
+/*# sourceMappingURL=login.css.map */

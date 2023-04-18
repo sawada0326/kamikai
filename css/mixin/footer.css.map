@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": ";AAAA,+CAA+C;AAC/C,+CAA+C;AAC/C,UAAU",
-"sources": ["../../sass/mixin/footer.scss"],
+"mappings": "AAAQ,8EAAsE;AACtE,gFAAwE",
+"sources": ["../../sass/mixin/theme.scss"],
 "names": [],
 "file": "footer.css"
 }

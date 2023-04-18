@@ -1,21 +1,14 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
-/*********************************************/
-/*********************************************/
-/* メニューボタン */
-/*********************************************/
-/*********************************************/
-/* 番組リスト */
-/*********************************************/
-/*********************************************/
-/* フッター */
-/******************************************/
-/******************************************/
-/* チャット　*/
-/* **************************************************************** */
-/* **************************************************************** */
-/* detail部分 */
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 .container {
   background-color: white;
   max-width: 980px;
@@ -93,11 +86,12 @@
         .main table tr td:nth-of-type(2) {
           max-width: 850px;
           padding-left: 10%; }
-        .date_time {
-          white-space: nowrap;
-        }
-      .main table tr #star {
-        color: goldenrod; }
+
+.date_time {
+  white-space: nowrap; }
+
+.main table tr #star {
+  color: goldenrod; }
 
 .edit_div {
   text-align: right; }
@@ -149,8 +143,7 @@
 
 html,
 body {
-  background-color: #109f53;
-  font-family: Arial, Helvetica, sans-serif; }
+  background-color: #f9f9f7; }
 
 ul {
   list-style: none;
@@ -160,27 +153,53 @@ ul {
 .chat h2,
 .update_list > h2,
 .update_list > p {
-  font-family: 'Kozuka Gothic Pr6N','M PLUS 1p', sans-serif;
+  font-family: "yu-gothic-pr6n", sans-serif;
   color: #444;
   width: 100%;
   max-width: 800px;
   margin: 10px auto; }
-  .chat h2 span,
-  .update_list > h2 span,
-  .update_list > p span {
-    padding-left: 0.5em; }
 
-input:focus::placeholder,
-textarea:focus::placeholder {
-  color: transparent; }
+.chat h2 span,
+.update_list > h2 span,
+.update_list > p span {
+  padding-left: 0.5em; }
+
+footer {
+  font-family: "yu-gothic-pr6n", sans-serif;
+  background-color: black;
+  margin-top: 90px;
+  width: 100%;
+  position: sticky;
+  top: 100vh; }
+  footer .footer_list {
+    height: 100px;
+    margin: auto; }
+    footer .footer_list ul {
+      padding: 15px;
+      height: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; }
+      footer .footer_list ul input a, footer .footer_list ul li a {
+        margin: 0px 13px;
+        font-size: small;
+        color: white;
+        display: block;
+        text-decoration: none; }
+      footer .footer_list ul input a:hover,
+      footer .footer_list ul li a:hover {
+        color: yellow; }
+  footer p {
+    color: white;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 15px; }
 
 header {
-  /* メニュー｜レスポンシブ対応 */
-  /*青いボタン*/
-  /* ヘッダー部分 */
   position: relative;
   width: 100%;
-  background-color: #109f53;
+  background-color: #f9f9f7;
   height: 100px;
   display: flex;
   flex-wrap: nowrap;
@@ -194,14 +213,14 @@ header {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    border: solid 3px yellow;
+    border: solid 3px black;
     display: block; }
     header .menu_btn span {
       display: inline-block;
       position: absolute;
       left: 13px;
       height: 2px;
-      background-color: yellow; }
+      background-color: black; }
       header .menu_btn span:nth-of-type(1) {
         top: 18px;
         width: 50%; }
@@ -226,13 +245,13 @@ header {
     white-space: nowrap;
     margin: 0px 15px 0px 25px;
     font-size: clamp(40px, 1vw, 60px);
-    font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
-    color: yellow; }
+    font-family: "yu-mincho-pr6n", sans-serif;
+    color: black; }
     header h1 a {
       text-decoration: none;
-      color: yellow; }
+      color: black; }
   header span {
-    font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+    font-family: "yu-mincho-pr6n", sans-serif;
     font-size: small;
     position: relative;
     left: 10px;
@@ -244,7 +263,7 @@ header {
       padding: 14px 10px; }
       header ul li a {
         text-decoration: none;
-        color: yellow; }
+        color: black; }
   header .search_box {
     margin: 0px 20px;
     display: flex;
@@ -261,14 +280,14 @@ header {
       border-style: inset;
       border-width: 2.5px; }
       header .search_box #sear_box::placeholder {
-        font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif; }
+        font-family: "yu-mincho-pr6n", sans-serif; }
       header .search_box #sear_box:focus {
         outline: 0; }
     header .search_box #sub_but {
       padding: 11px 40px;
       /*ボックスを大きくする*/
       font-size: 16px;
-      font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+      font-family: "yu-mincho-pr6n", sans-serif;
       border-style: inset;
       border-width: 3px; }
       header .search_box #sub_but:active {
@@ -285,24 +304,21 @@ header {
       left: 0;
       right: 0;
       width: 100%;
-      background-color: lightgray; }
+      background-color: #000;
+      opacity: 0.8; }
       header ul li {
         border-width: 3px;
-        padding: 0px 0px;
-        border-style: outset; }
-        header ul li:hover {
-          border-style: inset; }
+        padding: 0px 0px; }
         header ul li a {
+          opacity: 1;
           display: block;
           line-height: 60px;
           text-decoration: none;
-          color: black;
-          font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif; }
+          color: #fff;
+          font-family: "yu-gothic-pr6n", sans-serif;
+          border: solid 0.5px #eee; }
           header ul li a:hover {
-            background-color: darkgrey;
-            border-style: none; }
-          header ul li a:active {
-            background-color: darkgrey; }
+            background-color: #888; }
     header .is-active {
       display: block; } }
   @media all and (max-width: 767.98px) {
@@ -311,120 +327,93 @@ header {
     header h1 {
       margin: 0px 10px 0px 5%;
       font-size: 32px; } }
-
-footer {
-  font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
-  background-color: black;
-  margin-top: 90px;
-  width: 100%;
-  position: sticky;
-  top: 100vh; }
-  footer .footer_list {
-    height: 100px;
-    margin: auto; }
-    footer .footer_list ul {
-      padding: 15px;
-      height: 100px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center; }
-      footer .footer_list ul input a, footer .footer_list ul li a {
-        margin: 0px 13px;
-        font-size: small;
-        color: white;
-        display: block;
-        text-decoration: none; }
-        footer .footer_list ul input a:hover, footer .footer_list ul li a:hover {
-          color: yellow; }
-  footer p {
-    color: yellow;
-    text-align: center;
-    padding: 15px 0px;
-    font-size: 15px;
-    text-decoration: underline;
-    text-decoration-color: blueviolet; }
+  @media all and (max-width: 400px) {
+    header .menu_btn {
+      display: none !important; } }
 
 .update_list {
   color: #444;
-  margin-left: 20px;
-  margin-right: 20px;
   box-sizing: border-box;
   z-index: 1;
-  margin-top: 30px; }
-  .update_list a {
-    display: block;
-    text-align: right;
+  margin-top: 120px; }
+  .update_list .cards {
     max-width: 800px;
-    margin: 10px auto;
-    text-decoration: none; }
-    .update_list a:hover, .update_list a:visited {
-      color: blue; }
-    .update_list a span {
-      padding-right: 0.5em; }
-  .update_list table {
-    width: 100%;
-    max-width: 800px;
-    border-collapse: collapse;
-    margin: auto;
-    background-color: #FFFFFB;
-    color: #444;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    list-style: none; }
+  .update_list .card {
+    text-align: left;
+    position: relative;
+    margin: 30px 20px;
     border: solid 1.2px #888;
-    position: relative; }
-  .update_list tr {
-    height: 50px;
-    border-top: 1.2px dashed gray; }
-    .update_list tr:first-child {
-      border-top: none; }
-    .update_list tr td {
-      font-family: 'Kozuka Gothic Pr6N','M PLUS 1p', sans-serif;
-      padding: 0px 5px;
-      overflow: hidden;
-      white-space: nowrap;
-      position: relative; }
-      .update_list tr td:nth-of-type(1) {
-        width: 60px;
-        color: goldenrod;
-        padding: 0px 16px; }
-      .update_list tr td:nth-of-type(2) {
-        text-align: left;
-        width: 30px; }
-      .update_list tr td:nth-of-type(3) {
-        color: #444;
-        padding: 0px 0px;
-        max-width: 300px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -webkit-text-overflow: ellipsis;
-        -o-text-overflow: ellipsis; }
-        .update_list tr td:nth-of-type(3)::before {
-          content: "『"; }
-        .update_list tr td:nth-of-type(3)::after {
-          content: "』"; }
-      .update_list tr td:nth-of-type(4) {
-        color: gray; }
-      .update_list tr td:nth-of-type(5) {
-        color: tomato;
-        font-size: 13px; }
+    padding: 20px 10px;
+    width: 185px;
+    min-width: 175px;
+    height: 280px;
+    display: list-item;
+    transition: 0.6s; }
+    .update_list .card > img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      -moz-border-radius: 0px;
+      -webkit-border-radius: 0px;
+      border-radius: 0px; }
+    .update_list .card:hover {
+      opacity: 0.7;
+      animation-play-state: paused; }
+  .update_list a {
+    color: black;
+    text-decoration: none; }
+  .update_list .cate_mark {
+    width: 35px;
+    height: 35px;
+    color: white;
+    font-family: "yu-mincho-pr6n", sans-serif;
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: -18px;
+    left: -18px; }
+    .update_list .cate_mark > img {
+      width: 20px;
+      height: 20px;
+      margin: 2.3px 0px 0px 2.3px; }
+  .update_list .tv {
+    background-color: #f0877d; }
+  .update_list .radio {
+    background-color: #0f7891; }
+  .update_list .anime {
+    background-color: #fff000; }
+  .update_list .star i {
+    margin-right: 0.2em;
+    color: #888; }
+  .update_list .title {
+    font-family: "toppan-bunkyu-midashi-go-std", sans-serif;
+    font-weight: 700;
+    line-height: 170%;
+    letter-spacing: 0.1rem;
+    height: 60px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    width: 100%; }
+  .update_list .onair {
+    color: #666;
+    font-size: small; }
+  .update_list .comment_mark {
+    text-align: right;
+    color: #888;
+    font-size: small; }
   .update_list .click_table:hover td {
     filter: brightness(110%);
     opacity: 0.6;
     transition: opacity .3s;
     cursor: pointer; }
-  .update_list .cate_mark {
-    width: 40px;
-    color: white;
-    font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
-    font-size: 10px;
-    padding: 5px;
-    border-radius: 50vh; }
-  .update_list .tv {
-    background-color: red; }
-  .update_list .radio {
-    background-color: blue; }
-  .update_list .anime {
-    background-color: orange; }
   .update_list .private {
     border: 2px solid red; }
     .update_list .private span {
@@ -442,66 +431,41 @@ footer {
         top: 2.2px;
         left: 2.6px;
         color: white; }
-  @media all and (max-width: 678.98px) {
-    .update_list tr td:nth-of-type(4) {
-      font-size: 0.8em; }
-    .update_list h2 {
-      font-size: 20px;
-      padding-top: 8px; }
-      .update_list h2 span {
-        padding-left: 0.5em; } }
-  @media all and (max-width: 575.98px) {
-    .update_list {
-      margin-left: 0px;
-      margin-right: 0px; }
-      .update_list table {
-        width: 100%;
-        table-layout: fixed;
-        border-collapse: collapse;
-        margin: auto;
-        background-color: #FFFFFB;
-        color: #444;
-        border: solid 1.2px gray;
-        border-right-style: none;
-        border-left-style: none; }
-      .update_list tr td:nth-of-type(1) {
-        font-size: 0.8em;
-        width: 20%; }
-      .update_list tr td:nth-of-type(2) {
-        font-size: 0.8em;
-        width: 15%; }
-      .update_list tr td:nth-of-type(3) {
-        font-size: 0.9em;
-        width: 55%; }
-      .update_list tr td:nth-of-type(4) {
-        display: none; }
-      .update_list tr td:nth-of-type(5) {
-        width: 10%;
-        min-width: 10px; } }
-  @media all and (max-width: 400.98px) {
-    .update_list .cate_mark {
-      width: 30px;
-      color: white;
-      font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
-      font-size: 7px;
-      padding: 5px;
-      border-radius: 50vh; }
-    .update_list tr td:nth-of-type(1) {
-      padding: 0px 5px;
-      font-size: 0.8em;
-      width: 20%; }
-    .update_list tr td:nth-of-type(2) {
-      font-size: 0.8em;
-      width: 15%; }
-    .update_list tr td:nth-of-type(3) {
-      font-size: 0.9em;
-      width: 55%; }
-    .update_list tr td:nth-of-type(4) {
-      display: none; } }
+  .update_list h2 {
+    font-family: "yu-mincho-pr6n", sans-serif;
+    color: black;
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto; }
+    .update_list h2 span {
+      padding-left: 0.5em; }
+  .update_list .home_h2 {
+    font-family: "yu-mincho-pr6n", sans-serif;
+    color: black;
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto 20px auto;
+    text-align: center; }
+  @media all and (max-width: 670.98px) {
+    @keyframes infinity-scroll-left {
+      from {
+        transform: translateX(0); }
+      to {
+        transform: translateX(-100%); } }
+    .update_list .cards {
+      max-width: none;
+      width: 100vw;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: initial;
+      list-style: none;
+      animation: infinity-scroll-left 20s linear 0.6s infinite running; }
+    .update_list .card {
+      display: list-item; } }
 
 .chat {
   padding: 50px 20px;
-  background-color: cornsilk;
+  background-color: #f9f9f7;
   max-width: 800px;
   margin: 50px auto; }
   .chat .comments {
@@ -535,9 +499,9 @@ footer {
       position: absolute;
       right: 10px;
       top: 7px; }
-      .chat .comment p:nth-of-type(4) a {
-        text-decoration: none;
-        color: blue; }
+    .chat .comment p:nth-of-type(4) a {
+      text-decoration: none;
+      color: blue; }
   .chat .text_box {
     margin: 20px auto;
     max-width: 750px; }
@@ -547,16 +511,16 @@ footer {
       color: transparent; }
     .chat .text_box #__name, .chat .text_box #__subject, .chat .text_box #__category, .chat .text_box textarea {
       width: 100%;
-      padding: 4px 3px; }
-      .chat .text_box #__name:focus, .chat .text_box #__subject:focus, .chat .text_box #__category:focus, .chat .text_box textarea:focus {
+      padding: 4px 5px; }
+      .chat .text_box #__name:focus, .chat .text_box #__name:focus, .chat .text_box #__name:focus, .chat .text_box #__name:focus, .chat .text_box #__subject:focus, .chat .text_box #__subject:focus, .chat .text_box #__subject:focus, .chat .text_box #__subject:focus, .chat .text_box #__category:focus, .chat .text_box #__category:focus, .chat .text_box #__category:focus, .chat .text_box #__category:focus, .chat .text_box textarea:focus, .chat .text_box textarea:focus, .chat .text_box textarea:focus, .chat .text_box textarea:focus {
         border-color: dodgerBlue;
         box-shadow: 0 0 8px 0 dodgerBlue; }
-        .chat .text_box #__name:focus::placeholder, .chat .text_box #__subject:focus::placeholder, .chat .text_box #__category:focus::placeholder, .chat .text_box textarea:focus::placeholder {
-          color: transparent; }
+      .chat .text_box #__name:focus::placeholder, .chat .text_box #__name:focus::placeholder, .chat .text_box #__name:focus::placeholder, .chat .text_box #__name:focus::placeholder, .chat .text_box #__subject:focus::placeholder, .chat .text_box #__subject:focus::placeholder, .chat .text_box #__subject:focus::placeholder, .chat .text_box #__subject:focus::placeholder, .chat .text_box #__category:focus::placeholder, .chat .text_box #__category:focus::placeholder, .chat .text_box #__category:focus::placeholder, .chat .text_box #__category:focus::placeholder, .chat .text_box textarea:focus::placeholder, .chat .text_box textarea:focus::placeholder, .chat .text_box textarea:focus::placeholder, .chat .text_box textarea:focus::placeholder {
+        color: transparent; }
     .chat .text_box #__submit {
       width: 60px;
       padding: 0px 12px;
-      font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+      font-family: "yu-gothic-pr6n", sans-serif;
       border-style: outset;
       border-width: 3px; }
       .chat .text_box #__submit:active {
@@ -565,26 +529,26 @@ footer {
         border-style: inset; }
     .chat .text_box #__subject, .chat .text_box #__category {
       padding: 6px 3px; }
-      .chat .text_box #__subject:first-child span, .chat .text_box #__category:first-child span {
+      .chat .text_box #__subject:first-child span, .chat .text_box #__subject:first-child span, .chat .text_box #__category:first-child span, .chat .text_box #__category:first-child span {
         color: red; }
-      .chat .text_box #__subject::placeholder, .chat .text_box #__category::placeholder {
+      .chat .text_box #__subject::placeholder, .chat .text_box #__subject::placeholder, .chat .text_box #__category::placeholder, .chat .text_box #__category::placeholder {
         opacity: 0.9; }
-        .chat .text_box #__subject::placeholder span, .chat .text_box #__category::placeholder span {
-          color: dodgerBlue; }
+      .chat .text_box #__subject::placeholder span, .chat .text_box #__subject::placeholder span, .chat .text_box #__category::placeholder span, .chat .text_box #__category::placeholder span {
+        color: dodgerBlue; }
   @media all and (max-width: 678.98px) {
     .chat h2 {
       font-size: 20px;
       padding-top: 8px; }
-      .chat h2 span {
-        padding-left: 0.5em; } }
+    .chat span {
+      padding-left: 0.5em; } }
   .chat input:focus::placeholder,
   .chat textarea:focus::placeholder {
     color: transparent; }
   .chat #__name, .chat textarea {
+    padding-left: 0.5em;
     border-radius: 3px;
-    border-style: inset;
-    border-width: 2.5px; }
-    .chat #__name::placeholder, .chat textarea::placeholder {
-      font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif; }
+    border-style: inset; }
+    .chat #__name::placeholder, .chat #__name::placeholder, .chat textarea::placeholder, .chat textarea::placeholder {
+      font-family: "yu-gothic-pr6n", sans-serif; }
 
 /*# sourceMappingURL=detail.css.map */

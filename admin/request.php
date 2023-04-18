@@ -23,16 +23,17 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
-<title>神回DB｜投稿フォーム</title>
+<title>神回図鑑｜投稿フォーム</title>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script src="../javascript/font.js"></script>
 <link rel="stylesheet" href="../css/request_post.css">
 <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
 </head>
 
 <body>
     <header>
-        <h1><a href="all.php">神回DB<span>-管理版-</span></a></h1>
+        <h1><a href="all.php">神回図鑑<span>-管理版-</span></a></h1>
         <form action="search.php" method="GET" >
             <div class="search_box">
                 <input id="sear_box" type="text" value="" placeholder="番組名・出演者名を検索"　name="search"><input type="submit" id="sub_but" value="検索">

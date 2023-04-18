@@ -1,12 +1,14 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
-/*********************************************/
-/*********************************************/
-/* メニューボタン */
-/*********************************************/
-/*********************************************/
-/* フッター */
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -16,8 +18,8 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background-color: #109f53;
-  font-family: 'Kozuka Gothic Pr6N','M PLUS 1p', sans-serif;
+  background-color: #f9f9f7;
+  font-family: "yu-gothic-pr6n", sans-serif;
   color: #444; }
 
 input:focus::placeholder,
@@ -39,11 +41,9 @@ ul {
   white-space: nowrap; }
 
 header {
-  /* メニュー｜レスポンシブ対応 */
-  /* ヘッダー部分 */
   position: relative;
   width: 100%;
-  background-color: #109f53;
+  background-color: #f9f9f7;
   height: 100px;
   display: flex;
   flex-wrap: nowrap;
@@ -57,14 +57,14 @@ header {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    border: solid 3px yellow;
+    border: solid 3px black;
     display: block; }
     header .menu_btn span {
       display: inline-block;
       position: absolute;
       left: 13px;
       height: 2px;
-      background-color: yellow; }
+      background-color: black; }
       header .menu_btn span:nth-of-type(1) {
         top: 18px;
         width: 50%; }
@@ -89,13 +89,13 @@ header {
     white-space: nowrap;
     margin: 0px 15px 0px 25px;
     font-size: clamp(40px, 1vw, 60px);
-    font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
-    color: yellow; }
+    font-family: "yu-mincho-pr6n", sans-serif;
+    color: black; }
     header h1 a {
       text-decoration: none;
-      color: yellow; }
+      color: black; }
   header span {
-    font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+    font-family: "yu-mincho-pr6n", sans-serif;
     font-size: small;
     position: relative;
     left: 10px;
@@ -107,7 +107,7 @@ header {
       padding: 14px 10px; }
       header ul li a {
         text-decoration: none;
-        color: yellow; }
+        color: black; }
   header .search_box {
     margin: 0px 20px;
     display: flex;
@@ -124,14 +124,14 @@ header {
       border-style: inset;
       border-width: 2.5px; }
       header .search_box #sear_box::placeholder {
-        font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif; }
+        font-family: "yu-mincho-pr6n", sans-serif; }
       header .search_box #sear_box:focus {
         outline: 0; }
     header .search_box #sub_but {
       padding: 11px 40px;
       /*ボックスを大きくする*/
       font-size: 16px;
-      font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+      font-family: "yu-mincho-pr6n", sans-serif;
       border-style: inset;
       border-width: 3px; }
       header .search_box #sub_but:active {
@@ -148,24 +148,21 @@ header {
       left: 0;
       right: 0;
       width: 100%;
-      background-color: lightgray; }
+      background-color: #000;
+      opacity: 0.8; }
       header ul li {
         border-width: 3px;
-        padding: 0px 0px;
-        border-style: outset; }
-        header ul li:hover {
-          border-style: inset; }
+        padding: 0px 0px; }
         header ul li a {
+          opacity: 1;
           display: block;
           line-height: 60px;
           text-decoration: none;
-          color: black;
-          font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif; }
+          color: #fff;
+          font-family: "yu-gothic-pr6n", sans-serif;
+          border: solid 0.5px #eee; }
           header ul li a:hover {
-            background-color: darkgrey;
-            border-style: none; }
-          header ul li a:active {
-            background-color: darkgrey; }
+            background-color: #888; }
     header .is-active {
       display: block; } }
   @media all and (max-width: 767.98px) {
@@ -174,9 +171,12 @@ header {
     header h1 {
       margin: 0px 10px 0px 5%;
       font-size: 32px; } }
+  @media all and (max-width: 400px) {
+    header .menu_btn {
+      display: none !important; } }
 
 footer {
-  font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+  font-family: "yu-gothic-pr6n", sans-serif;
   background-color: black;
   margin-top: 90px;
   width: 100%;
@@ -198,15 +198,14 @@ footer {
         color: white;
         display: block;
         text-decoration: none; }
-        footer .footer_list ul input a:hover, footer .footer_list ul li a:hover {
-          color: yellow; }
+      footer .footer_list ul input a:hover,
+      footer .footer_list ul li a:hover {
+        color: yellow; }
   footer p {
-    color: yellow;
+    color: white;
     text-align: center;
     padding: 15px 0px;
-    font-size: 15px;
-    text-decoration: underline;
-    text-decoration-color: blueviolet; }
+    font-size: 15px; }
 
 select {
   padding: 5px 0px; }
@@ -296,12 +295,14 @@ section {
     padding: 11px 40px;
     /*ボックスを大きくする*/
     font-size: 16px;
-    font-family: 'JF Dot jiskan16s','DotGothic16', sans-serif;
+    font-family: "yu-mincho-pr6n", sans-serif;
     border-style: inset;
     border-width: 3px; }
     .container #button:active {
       background-color: gray; }
   .container small {
     color: red; }
+
+/*# sourceMappingURL=form.css.map */
 
 /*# sourceMappingURL=form.css.map */

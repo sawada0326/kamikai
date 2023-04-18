@@ -48,15 +48,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../javascript/font.js"></script>
     <link rel="stylesheet" href="../css/form.css">
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
 
-    <title>神回DB | 追加フォーム</title>
+    <title>神回図鑑 | 追加フォーム</title>
 </head>
 <body>
     <header>
-        <h1><a href="all.php">神回DB<span>-管理版-</span></a></h1>
+        <h1><a href="all.php">神回図鑑<span>-管理版-</span></a></h1>
         <form action="search.php" method="GET" >
             <div class="search_box">
                 <input id="sear_box" type="text" value="" placeholder="番組名・出演者名を検索"　name="search"><input type="submit" id="sub_but" value="検索">

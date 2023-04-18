@@ -1,0 +1,114 @@
+@charset "UTF-8";
+@import "mixin/footer.scss";
+@import "mixin/header.scss";
+@import "mixin/list.scss";
+@import "mixin/theme.scss";
+@import "mixin/comment.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $main-color; }
+
+h2 {
+  color: black;
+  margin: 0px 0px 30px 0px; }
+
+ul {
+  list-style: none; }
+
+.container {
+  font-family: $sub-font;
+  background-color: white;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 50px; 
+}
+.container a > span {
+  padding-left: 15px; 
+}
+
+.accordion-area {
+  list-style: none;
+  width: 96%;
+  max-width: 900px;
+  margin: 0 auto; 
+  li {
+    margin: 7px 0; 
+  }
+  section {
+    border: 1px solid #ccc; 
+  }
+}
+
+
+/*アコーディオンタイトル*/
+.title {
+  position: relative;
+  /*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 2% 2% 2% 50px;
+  transition: all .5s ease; 
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: #333; 
+  }
+  
+  &::before {
+    top: 48%;
+    left: 15px;
+    transform: rotate(0deg); 
+  }
+  
+  &::after {
+    top: 48%;
+    left: 15px;
+    transform: rotate(90deg); 
+  }
+}
+
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before {
+  transform: rotate(45deg); }
+
+.title.close::after {
+  transform: rotate(-45deg); }
+
+/*アコーディオンで現れるエリア*/
+.box {
+  display: none;
+  /*はじめは非表示*/
+  background: #f3f3f3;
+  margin: 0 3% 3% 3%;
+  padding: 3%;
+  position: relative; 
+  span {
+    position: absolute;
+    bottom: 3px;
+    right: 6px;
+    font-size: 12px; 
+  }
+}
+
+
+header {
+  @include header;
+}
+
+footer {
+  @include footer;
+}
+
+/*# sourceMappingURL=request_post.css.map */

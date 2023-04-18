@@ -1,0 +1,208 @@
+@charset "UTF-8";
+@import "mixin/footer.scss";
+@import "mixin/header.scss";
+@import "mixin/list.scss";
+@import "mixin/theme.scss";
+@import "mixin/comment.scss";
+
+
+.container {
+  background-color: white;
+  max-width: 980px;
+  margin: 0px auto;
+  padding: 20px 0px; 
+  img {
+    margin: 5px auto;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: block;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    animation-name: fadeInAnime;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0; 
+  }
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; 
+  } 
+}
+
+
+.main {
+  z-index: 1;
+  position: relative;
+  padding: 25px 40px;
+  margin: 0 auto;
+  max-width: 800px;
+  > p {
+    display: block;
+    color: #13a8b8;
+    background-color: #adece9;
+    border: 3px solid #13a8b8;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px 0px;
+    letter-spacing: 1.1px;
+    transition: all 0.2; }
+  .tag {
+    display: flex;
+    align-items: center;
+    margin: 35px 0px; 
+    a {
+      text-decoration: none;
+      color: black;
+      border-radius: 50vh;
+      background-color: #eee;
+      padding: 7.5px 15px;
+      margin: 0px 8px;
+      display: inline-block;
+      font-size: 13px; 
+      &:hover {
+        filter: brightness(105%);
+        opacity: 0.6;
+        transition: opacity .3s;
+        cursor: pointer; 
+      }
+    }
+  }
+  h2 {
+    margin: 15px 0px;
+    font-family: monospace;
+    color: blue; 
+  }
+  h1 span, h2 span {
+    padding-right: 0.5em; 
+  }
+  table {
+    margin: 35px 11px 35px 27px;
+    color: #444; 
+    tr {
+      height: 50px; 
+      td {
+        vertical-align: top;
+        letter-spacing: 1.1px; 
+        &:nth-of-type(1) {
+          min-width: 80px; 
+        }
+        &:nth-of-type(2) {
+          max-width: 850px;
+          padding-left: 10%; 
+        }
+      }
+    }
+  }
+}
+
+.date_time {
+  white-space: nowrap;
+}
+.main table tr #star {
+  color: goldenrod; 
+}
+
+.edit_div {
+  text-align: right; 
+  a {
+    text-decoration: none; 
+  }
+}
+
+.update_list_wrapper {
+  margin-top: 75px; }
+
+.text_box > p {
+  display: block;
+  color: #442dad;
+  font-size: 1rem;
+  background-color: #d0d6f9;
+  border: 3px solid #442dad;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  letter-spacing: 1.1px;
+  white-space: wrap; 
+}
+
+@media all and (max-width: 767.98px) {
+  .container {
+    padding-top: 10px; }
+
+  .main {
+    z-index: 1;
+    width: 100%;
+    position: relative;
+    padding: 20px 30px; 
+    table {
+      margin-top: 40px; 
+      tr {
+        height: 45px; 
+        td {
+          vertical-align: center; 
+          &:nth-of-type(1) {
+            width: 80px; 
+          } 
+        }
+      }
+    }
+  }
+}
+/* **************************************************************** */
+/* **************************************************************** */
+/* 共通部分  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 0vw;
+  /* Safari clamp関数対策 */ }
+
+html,
+body {
+  background-color: $main-color;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  white-space: nowrap; 
+}
+
+.chat h2,
+.update_list > h2,
+.update_list > p {
+  font-family: $sub-font;
+  color: #444;
+  width: 100%;
+  max-width: 800px;
+  margin: 10px auto; 
+}
+  .chat h2 span,
+  .update_list > h2 span,
+  .update_list > p span {
+    padding-left: 0.5em; 
+  }
+
+
+footer {
+  @include footer;
+}
+header {
+  @include header;
+}
+
+.update_list {
+  @include list;
+}
+
+.chat {
+  @include comment;
+}

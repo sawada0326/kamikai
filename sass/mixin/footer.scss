@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@import "./theme.scss";
+
+@mixin footer {
+    font-family: $sub-font;
+    background-color: black;
+    margin-top: 90px;
+    width: 100%;
+    position: sticky;
+    top: 100vh;
+    .footer_list {
+        height: 100px;
+        margin: auto; 
+        ul {
+        padding: 15px;
+        height: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+            input a,li a {
+                margin: 0px 13px;
+                font-size: small;
+                color: white;
+                display: block;
+                text-decoration: none; 
+            }
+            input a:hover,
+            li a:hover {
+                color: yellow; 
+            }
+        }
+    }
+    p {
+    color: white;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 15px;
+    }
+}
+  

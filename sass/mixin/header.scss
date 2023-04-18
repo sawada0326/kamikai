@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@import "./theme.scss";
+
+@mixin header {
+    position: relative;
+    width: 100%;
+    background-color: $main-color;
+    height: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    z-index: 10; 
+    .menu_btn {
+      display: none !important;
+      margin-left: auto;
+      margin-right: 15px;
+      position: relative;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      border: solid 3px $sub-color;
+      display: block; 
+      span {
+        display: inline-block;
+        position: absolute;
+        left: 13px;
+        height: 2px;
+        background-color: $sub-color; 
+            &:nth-of-type(1) {
+            top: 18px;
+            width: 50%; 
+            }
+            &:nth-of-type(2) {
+            top: 25px;
+            width: 50%; 
+            }
+        }
+    }
+    .active span:nth-of-type(1) {
+      top: 16px;
+      left: 12px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 50%; 
+    }
+    .active span:nth-of-type(2) {
+      position: absolute;
+      top: 28px;
+      left: 12px;
+      transform: translateY(-6px) rotate(45deg);
+      width: 50%; 
+    }
+    @media all and (max-width: 1160px) {
+      .menu_btn {
+        display: block !important; } 
+      }
+    h1 {
+      white-space: nowrap;
+      margin: 0px 15px 0px 25px;
+      font-size: clamp(40px, 1vw, 60px);
+      font-family:$main-font;
+      color: $sub-color; 
+      a {
+        text-decoration: none;
+        color: $sub-color; 
+      }
+    }
+    span {
+      font-family: $main-font;
+      font-size: small;
+      position: relative;
+      left: 10px;
+      bottom: 0px; 
+    }
+    ul {
+      position: absolute;
+      right: 10px; 
+      li {
+        padding: 14px 10px; 
+        a {
+          text-decoration: none;
+          color: $sub-color; 
+        }
+      }
+    }
+    .search_box {
+      margin: 0px 20px;
+      display: flex;
+      flex-wrap: nowrap;
+      text-align: center;
+      .sear_text {
+        height: 30px; 
+      }
+      #sear_box {
+        width: 30vw;
+        padding: 10px 15px;
+        /*ボックスを大きくする*/
+        font-size: 16px;
+        border-radius: 3px;
+        border-style: inset;
+        border-width: 2.5px; 
+        &::placeholder {
+          font-family: $main-font; 
+        }
+        &:focus {
+          outline: 0; 
+        }
+      }
+      #sub_but {
+        padding: 11px 40px;
+        /*ボックスを大きくする*/
+        font-size: 16px;
+        font-family: $main-font;
+        border-style: inset;
+        border-width: 3px;     
+        &:active {
+          background-color: gray;
+          position: relative;
+          top: 2px; 
+        }
+      }
+    }
+    @media all and (max-width: 1160px) {
+      ul {
+        z-index: 2;
+        display: none;
+        text-align: center;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: #000;
+        opacity:0.8;
+        li {
+          border-width: 3px;
+          padding: 0px 0px;     
+          a {
+            opacity:1;
+            display: block;
+            line-height: 60px;
+            text-decoration: none;
+            color: #fff;
+            font-family: $sub-font;
+            border:solid 0.5px #eee;
+            &:hover {
+              background-color:#888;
+            }
+          }
+        }
+     }
+     .is-active {
+        display: block;
+     }
+    }  
+    @media all and (max-width: 767.98px) {
+      #sub_but {
+        display: none; 
+      }
+      h1 {
+        margin: 0px 10px 0px 5%;
+        font-size: 32px; 
+      } 
+    }
+    @media all and (max-width: 400px) {
+      .menu_btn {
+        display: none !important; 
+      }
+    }
+}

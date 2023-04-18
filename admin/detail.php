@@ -32,15 +32,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/detail.css">
     <link rel=”icon” type=”image/png” href=“../image/favicon.png”>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="../javascript/font.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
-    <title>神回DB｜『<?php echo h($articleData['title']) ?>』<?php echo h($articleData['caption']) ?>の回</title>
+    <title>神回図鑑|<?php echo h($articleData['title']) ?>』<?php echo h($articleData['caption']) ?>の回</title>
 </head>
 <body>
     <header>
-        <h1><a href="all.php">神回DB<span>-管理版-</span></a></h1>
+        <h1><a href="all.php">神回図鑑<span>-管理版-</span></a></h1>
         <form action="search.php" method="GET">
             <div class="search_box">
                 <input id="sear_box" type="text" value="" placeholder="番組名・出演者名を検索" name="q"><input type="submit" id="sub_but" value="検索">
@@ -121,28 +122,67 @@
                 <?php if(empty($sameTitleArticles)): ?>
                 <p><span></span>同じタイトルの記事はありません</p>
                 <?php else: ?>
-                <table>
+                    <div class="cards">
                     <?php foreach($sameTitleArticles as $sameTitleArticle): ?>
-                        <tr data-href="detail.php?id=<?php echo h($sameTitleArticle['id']); ?>" class="<?php if($sameTitleArticle['publish_status'] === "0")echo 'private' ?>">
-                            <td align="center">
-                                <?php if($sameTitleArticle['publish_status'] === "0"): ?>
-                                    <i class="fa fa-solid fa-lock lock"></i>
-                                <?php endif; ?>
-                                <?php for($i=1; $i <= $sameTitleArticle['rating'];$i++): ?>
+                        <?php if($sameTitleArticle['publish_status'] === 0)continue; ?>
+                        <a class="card" href="detail.php?id=<?php echo h($sameTitleArticles['id']); ?>">
+                            <?php $img = $article->getImage($sameTitleArticles['title']); ?>
+                            <?php if(is_array($img) && empty($img)): ?>
+                                <img src="../images/no_image.jpg" alt="">
+                            <?php else: ?>
+                                <?php if (file_exists($img[0]['path'])): ?>
+                                    <img src='<?php echo $img[0]['path'] ?>' alt="">
+                                <?php else:?>
+                                    <img src="../images/no_image.jpg" alt="">
+                                <?php endif ?>
+                            <?php endif ?>
+                            <p class="cate_mark <?php echo $article->setClass(h($sameTitleArticles['category'])) ?>"><img src="../images/category_mark/<?php echo $article->setClass(h($sameTitleArticles['category'])) ?>.png" alt=""></p>
+                            <p class="star">
+                                <?php for($i=1; $i <= h($sameTitleArticles['rating']) ;$i++): ?>
                                     <i class="fa fa-solid fa-star"></i>
                                 <?php endfor; ?>
-                            </td>
-                            <td><p class="cate_mark <?php echo $article->setClass(h($sameTitleArticle['category']))?>"><?php echo $sameTitleArticle['category'] ?></p></td>
-                            <td><?php echo h($sameTitleArticle['title']) ?></td>
-                            <td><?php echo date('Y年n月j日放送回', strtotime(h($sameTitleArticle['on_air_date']))) ?></td>
-                            <?php $comment_count = $article->getCommentCount(h($sameTitleArticle['id'])) ?>
-                            <td><i class="fa fa-comment"></i> <?php echo $comment_count[0]['count']?></td>
-                            <td><a href="./update_form.php?id=<?php echo h($articleData['id']); ?>">編集</a></td>
-                        <td><a href="../lib/article_delete.php?id=<?php echo h($articleData['id']); ?>">削除</a></td>
-                        </tr>
-                    <?php endforeach ?>                      
-                </table>
+                            </p>
+                            <p class="title"><?php echo h($sameTitleArticles['title']) ?></p>
+                            <p class="onair"><?php echo date('Y年n月j日放送回', strtotime(h($sameTitleArticles['on_air_date']))) ?></p>
+                            <?php $comment_count = $article->getCommentCount(h($sameTitleArticles['id'])) ?>
+                            <p class="comment_mark"><i class="fa fa-comment"></i> <?php echo h($comment_count[0]['count']) ?></p>
+                        </a>
+                    <?php endforeach ?>                                        
+                </div>
                 <?php endif ?>
+            </div>
+            <div class="update_list">
+            <h2><span></span>おすすめ神回</h2>
+            <div class="cards">
+                    <?php $n = 0;?>
+                    <?php shuffle($articles) ?>
+                    <?php foreach($articles as $recommend): ?>
+                    <?php if($n >= 6)break ?>
+                    <?php if($recommend['title'] == $articleData['title'])continue ?>
+                    <a class="card" href="detail.php?id=<?php echo h($recommend['id']); ?>">
+                        <?php $img = $article->getImage($recommend['title']); ?>
+                        <?php if(is_array($img) && empty($img)): ?>
+                            <img src="../images/no_image.jpg" alt="">
+                        <?php else: ?>
+                            <?php if (file_exists($img[0]['path'])): ?>
+                                <img src='<?php echo $img[0]['path'] ?>' alt="">
+                            <?php else:?>
+                                <img src="../images/no_image.jpg" alt="">
+                            <?php endif ?>
+                        <?php endif ?>
+                        <p class="cate_mark <?php echo $article->setClass(h($recommend['category'])) ?>"><img src="../images/category_mark/<?php echo $article->setClass(h($recommend['category'])) ?>.png" alt=""></p>
+                        <p class="star">
+                            <?php for($i=1; $i <= h($recommend['rating']) ;$i++): ?>
+                                <i class="fa fa-solid fa-star"></i>
+                            <?php endfor; ?>
+                        </p>
+                        <p class="title"><?php echo h($recommend['title']) ?></p>
+                        <p class="onair"><?php echo date('Y年n月j日放送回', strtotime(h($recommend['on_air_date']))) ?></p>
+                        <?php $comment_count = $article->getCommentCount(h($recommend['id'])) ?>
+                        <p class="comment_mark"><i class="fa fa-comment"></i> <?php echo h($comment_count[0]['count']) ?></p>
+                    </a>
+                    <?php $n++; ?>
+                    <?php endforeach ?>                                        
             </div>
         </div>
         <div class="chat">
@@ -177,7 +217,7 @@
         </div>
         <p>@kamikai_db_administer</p>
     </footer>
-    <script src="../javascript/table_click.js"></script>
     <script src="../javascript/menu_button.js"></script>
+    <script src="../javascript/scroll.js"></script>
 </body>
 </html>

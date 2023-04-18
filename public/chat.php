@@ -34,13 +34,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="../javascript/font.js"></script>
     <link rel="stylesheet" href="../css/chat.css">
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
-    <title>神回DB|<?php echo $category ?>版掲示板</title>
+    <title>神回図鑑|<?php echo $category ?>版掲示板</title>
 </head>
 <body>
     <header>
-        <h1><a href="all.php">神回DB</a></h1>
+        <h1><a href="all.php">神回図鑑</a></h1>
         <div class="search_box">
             <input id="sear_box" type="text" value="" placeholder="番組名・出演者名を検索"　name="search"><input type="submit" id="sub_but" value="検索">
         </div>
